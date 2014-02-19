@@ -1,9 +1,29 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:orientation="vertical"
     tools:context=".TableActivity" >
+    
+    <LinearLayout
+        android:id="@+id/balance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Balance: 100 BTC"/>
+        
+        <Button android:text="Cashier"
+            	android:layout_width="match_parent"
+            	android:layout_weight="0.5"
+            	android:layout_height="wrap_content" />
+        
+    </LinearLayout>
 
     <!--
          The primary full-screen view. This can be replaced with whatever view
@@ -11,10 +31,12 @@
          TextureView, etc.
     -->
 
-<FrameLayout
+	<FrameLayout
  android:id="@+id/fullscreen_content"
  android:layout_width="fill_parent"
- android:layout_height="fill_parent"
+ android:layout_height="match_parent"
+ android:layout_below="@+id/balance_layout"
+ android:layout_above="@+id/button_layout"
  android:background="#0099cc" >
 <ImageView 
  android:id="@+id/image_areas"
@@ -34,35 +56,27 @@
 
 </FrameLayout>
 
-    <!--
-         This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows.
-    -->
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true" >
-
         <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?buttonBarStyle"
+            android:id="@+id/button_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
+            android:layout_gravity="bottom"
             android:orientation="horizontal"
-            tools:ignore="UselessParent" >
+            android:layout_alignParentBottom="true" >
 
             <Button
                 android:id="@+id/dummy_button"
-                style="?buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:text="@string/dummy_button" />
+            
+            <Button
+                android:id="@+id/dummy_button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
                 android:text="@string/dummy_button" />
         </LinearLayout>
-    </FrameLayout>
 
-
-</FrameLayout>
+</RelativeLayout>
