@@ -1,6 +1,7 @@
 package com.derp.coinroulette;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -66,4 +67,15 @@ public class TableActivity extends Activity implements View.OnTouchListener {
 		    return false;
 		 return true;
 	} 
+	
+	
+	public void callBetClicked(View view) {
+		Intent intent;
+		if (getResources().getBoolean(R.bool.dual_pane)) {
+			intent = new Intent(this, TwoPanePlaceBetActivity.class);
+		} else {
+			intent = new Intent(this, SinglePanePlaceBetActivity.class);
+		}
+		startActivity(intent);
+	}
 }

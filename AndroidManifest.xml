@@ -25,6 +25,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+         <activity
+            android:name="com.derp.coinroulette.TwoPanePlaceBetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Place bet"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
+        
+        <activity
+            android:name="com.derp.coinroulette.SinglePanePlaceBetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Place bet"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
+        
+        <activity
+            android:name="com.derp.coinroulette.ConfirmBetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Place bet"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
     </application>
 
 </manifest>
