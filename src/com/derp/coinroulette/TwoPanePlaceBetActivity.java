@@ -21,5 +21,10 @@ public class TwoPanePlaceBetActivity extends FragmentActivity implements OnItemC
 		ConfirmBetFragment frag = new ConfirmBetFragment();
 		getSupportFragmentManager().beginTransaction().add(R.id.details_frame_layout, frag).commit();
 	}
+	
+	public void onConfirmBet(View v) {
+		setResult(1, getIntent().putExtra("bet_type", "asdf"));
+		finish();
+	}
 
 }

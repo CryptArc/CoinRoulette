@@ -76,6 +76,14 @@ public class TableActivity extends Activity implements View.OnTouchListener {
 		} else {
 			intent = new Intent(this, SinglePanePlaceBetActivity.class);
 		}
-		startActivity(intent);
+		startActivityForResult(intent, 1);
 	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == 1) {
+			Toast.makeText(this, data.getExtras().getString("bet_type"), Toast.LENGTH_LONG).show();
+		}
+	}
+	
 }

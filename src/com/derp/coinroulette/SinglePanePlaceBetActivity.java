@@ -17,7 +17,13 @@ public class SinglePanePlaceBetActivity extends FragmentActivity implements OnIt
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		Intent intent = new Intent(this, ConfirmBetActivity.class);
-		startActivity(intent);
+		startActivityForResult(intent, 1);
 	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		setResult(resultCode, data);
+		finish();
+	}
+	
 }
