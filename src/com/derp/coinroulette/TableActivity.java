@@ -78,6 +78,11 @@ public class TableActivity extends Activity implements View.OnTouchListener {
 		}
 		startActivityForResult(intent, 1);
 	}
+	
+	public void spinWheelClicked(View view) {
+		Intent intent= new Intent(this, SpinWheelActivity.class);
+		startActivity(intent);
+	}
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {

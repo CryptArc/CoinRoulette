@@ -49,6 +49,14 @@
             android:screenOrientation="landscape"
             android:theme="@style/Theme.NoTitle" >
         </activity>
+        
+        <activity
+            android:name="com.derp.coinroulette.SpinWheelActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Spin Wheel"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
     </application>
 
 </manifest>

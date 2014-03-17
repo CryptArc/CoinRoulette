@@ -74,6 +74,7 @@
             
             <Button
                 android:id="@+id/spin_wheel_button"
+                android:onClick="spinWheelClicked"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
