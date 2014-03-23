@@ -86,7 +86,7 @@ public class TableActivity extends Activity implements View.OnTouchListener {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (requestCode == 1) {
+		if (requestCode == 1 && data != null) {
 			Toast.makeText(this, data.getExtras().getString("bet_type"), Toast.LENGTH_LONG).show();
 		}
 	}
