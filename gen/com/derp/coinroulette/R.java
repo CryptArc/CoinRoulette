@@ -33,6 +33,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int image=0x7f020001;
         public static final int image_mask=0x7f020002;
         public static final int wheel=0x7f020003;
+        public static final int wheel_ball=0x7f020004;
     }
     public static final class id {
         public static final int BetlistFragment=0x7f0a0002;
